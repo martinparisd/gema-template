@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --accent-color: #3b82f6;
+  --background-color: #ffffff;
+  --text-color: #111827;
+  --font-family: system-ui, -apple-system, sans-serif;
+  --headings-font: system-ui, -apple-system, sans-serif;
+  --border-radius: 0.375rem;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headings-font);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(1.1);
+  }
+  20%, 40% {
+    transform: scale(1);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* Theme color utilities */
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-secondary {
+  color: var(--secondary-color) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+.border-secondary {
+  border-color: var(--secondary-color) !important;
+}
+
+.hover\:bg-primary:hover {
+  background-color: var(--primary-color) !important;
+}
+
+.hover\:bg-secondary:hover {
+  background-color: var(--secondary-color) !important;
+}
+
+.hover\:text-primary:hover {
+  color: var(--primary-color) !important;
+}
+
+.hover\:text-secondary:hover {
+  color: var(--secondary-color) !important;
+}
+
+.ring-primary {
+  --tw-ring-color: var(--primary-color) !important;
+}
+
+.ring-secondary {
+  --tw-ring-color: var(--secondary-color) !important;
+}
+
+.focus\:ring-primary:focus {
+  --tw-ring-color: var(--primary-color) !important;
+}
+
+.focus\:ring-secondary:focus {
+  --tw-ring-color: var(--secondary-color) !important;
+}
+
+/* Opacity variants for primary color */
+.bg-primary\/10 {
+  background-color: color-mix(in srgb, var(--primary-color) 10%, transparent) !important;
+}
+
+.bg-primary\/20 {
+  background-color: color-mix(in srgb, var(--primary-color) 20%, transparent) !important;
+}
+
+.hover\:bg-primary\/10:hover {
+  background-color: color-mix(in srgb, var(--primary-color) 10%, transparent) !important;
+}
